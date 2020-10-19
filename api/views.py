@@ -26,6 +26,9 @@ class MessagesViewSet(viewsets.ModelViewSet):
         serializer = MessageSerializer(messages, many=True)
         return Response(serializer.data)
 
+    # def create(self, request, *args, **kwargs):
+
+
 class ThoughtsViewSet(viewsets.ModelViewSet):
     queryset = Thought.objects.all()
     serializer_class = ThoughtSerializer

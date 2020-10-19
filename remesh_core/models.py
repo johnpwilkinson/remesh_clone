@@ -12,7 +12,7 @@ class Conversation(models.Model):
 class Message(models.Model):
 
     message = models.CharField(max_length=280)
-    submission_time = models.DateTimeField( default=timezone.now)
+    submission_time = models.DateTimeField(auto_now_add=True)
     conversation = models.ForeignKey(Conversation, related_name='of_conversation', on_delete=models.CASCADE)
 
     def __str__(self):
