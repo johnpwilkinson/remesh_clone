@@ -24,7 +24,7 @@ class MessageSerializer(serializers.ModelSerializer):
         ]
 
 class ThoughtSerializer(serializers.ModelSerializer):
-    message = serializers.StringRelatedField()
+    # message = serializers.StringRelatedField()
 
     class Meta:
         model= Thought

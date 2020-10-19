@@ -21,7 +21,7 @@ class Message(models.Model):
 class Thought(models.Model):
 
     thought = models.CharField(max_length=280)
-    submission_time = models.DateTimeField( default=timezone.now)
+    submission_time = models.DateTimeField(auto_now_add=True)
     message = models.ForeignKey(Message, related_name='on_message', on_delete=models.CASCADE)
 
     def __str__(self):
